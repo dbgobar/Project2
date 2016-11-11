@@ -1,0 +1,18 @@
+<h1>P O S T S</h1>
+
+<table>
+  <tr>
+    <th>..</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><img src= "<%= post.photo_url %>"></td>
+      <td><%= post.name %></td>
+      <td><%= post.description %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+    </tr>
+  <% end %>
+</table>
