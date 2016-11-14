@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new(post_params)
   end
 
   def edit
@@ -35,7 +36,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name, :description, :resume)
+    params.require(:post).permit(:name, :photo_url, :description, :resume)
   end
 
 

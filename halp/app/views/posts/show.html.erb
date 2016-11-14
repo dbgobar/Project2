@@ -1,4 +1,6 @@
 
+<div class = "showpage">
+
 <p>
   <strong>Name:</strong>
   <%= @post.name %>
@@ -16,5 +18,37 @@
   <%= @post.resume %>
 </p>
 
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.content %>
+  </p>
+<% end %>
+
+<h2>Add your comment here:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
 <%= link_to 'Back', posts_path %> |
 <%= link_to 'Edit', edit_post_path(@post)%>
+
+</div>

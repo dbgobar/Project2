@@ -7,10 +7,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   </head>
 
+
   <body>
+    <nav class = "topnav">
+    <h1><%=link_to 'H A L P', posts_path%> </h1>
+    <%= link_to 'New Post', new_post_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
