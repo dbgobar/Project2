@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'posts/new'
   # get 'posts/create'
   # get 'posts/show'
-  #
+
   # root 'posts#index'
   # root 'posts#new'
   # root 'posts#create'

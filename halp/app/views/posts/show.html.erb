@@ -1,9 +1,10 @@
+
 <p>
   <strong>Name:</strong>
   <%= @post.name %>
 </p>
 
-<img src = "photo_url">
+<img src= "post.photo_url">
 
 <p>
   <strong>Description:</strong>
@@ -12,5 +13,8 @@
 
 <p>
   <strong>Resume:</strong>
-  <%= @post.resume %> 
+  <%= @post.resume %>
 </p>
+
+<%= link_to 'Back', posts_path %> |
+<%= link_to 'Edit', edit_post_path(@post)%>

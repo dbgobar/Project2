@@ -1,18 +1,32 @@
-<h1>P O S T S</h1>
 
-<table>
-  <tr>
+<nav class = "topnav">
+<h1> H A L P </h1>
+<%= link_to 'New Post', new_post_path %>
+</nav>
+
+<div class= "content">
+  <!-- <tr>
     <th>..</th>
     <th>Name</th>
     <th>Description</th>
-  </tr>
+  </tr> -->
 
   <% @posts.each do |post| %>
-    <tr>
-      <td><img src= "<%= post.photo_url %>"></td>
-      <td><%= post.name %></td>
-      <td><%= post.description %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-    </tr>
+    <div>
+      <ul>
+      <li><img src= "<%= post.photo_url %>"></li>
+      <li><%= post.name %></li>
+      <li><%= post.description %></li>
+
+        <div class = "userlinks">
+          <div><%= link_to 'Show', post_path(post) %> | </div>
+          <div><%= link_to 'Edit', edit_post_path(post)%> | </div>
+          <div><%= link_to 'Destroy', post_path(post),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %></div>
+        </div>
+      </ul>
+    </div>
+
   <% end %>
-</table>
+</div>
