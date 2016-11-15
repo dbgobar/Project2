@@ -78,8 +78,6 @@ ul{
 .userlinks {
   display: flex;
   justify-content: center;
-  font-variant: small-caps;
-  font-weight: thin;
 }
 
 .showpage{
