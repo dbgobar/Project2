@@ -8,9 +8,9 @@
       <li><%= post.description %></li>
 
         <div class = "userlinks">
-          <div><%= link_to 'Show', post_path(post) %> | </div>
-          <div><%= link_to 'Edit', edit_post_path(post)%> | </div>
-          <div><%= link_to 'Delete', post_path(post),
+          <div><%= link_to 'show  |', post_path(post) %> </div>
+          <div><%= link_to 'edit  |', edit_post_path(post)%> </div>
+          <div><%= link_to 'delete', post_path(post),
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %></div>
         </div>

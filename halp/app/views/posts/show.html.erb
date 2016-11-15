@@ -6,7 +6,8 @@
   <%= @post.name %>
 </p>
 
-<img src= "post.photo_url">
+
+<%= image_tag image_url("post.photo_url")%>
 
 <p>
   <strong>Description:</strong>
@@ -14,41 +15,20 @@
 </p>
 
 <p>
-  <strong>Resume:</strong>
+  <strong>Resume link:</strong>
   <%= @post.resume %>
 </p>
 
 
 <h2>Comments</h2>
-<% @post.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.content %>
-  </p>
-<% end %>
+<%= render @post.comments %>
 
 <h2>Add your comment here:</h2>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'comments/form' %>
 
-
-<%= link_to 'Back', posts_path %> |
+<div class = "navlinks">
+<%= link_to 'Back |', posts_path %>
 <%= link_to 'Edit', edit_post_path(@post)%>
+</div>
 
 </div>

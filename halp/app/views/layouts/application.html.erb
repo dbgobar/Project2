@@ -13,10 +13,15 @@
 
 
   <body>
+    <div class = "background-image"></div>
     <nav class = "topnav">
     <h1><%=link_to 'H A L P', posts_path%> </h1>
     <%= link_to 'New Post', new_post_path %>
     </nav>
     <%= yield %>
   </body>
+
+  <nav class = "bottomnav">
+    <a class = "bottomlink" href = "github.com">Github</a>
+  </nav>
 </html>
