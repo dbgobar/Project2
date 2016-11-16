@@ -17,14 +17,13 @@
     <nav class = "topnav">
     <h1><%=link_to 'H A L P', posts_path%> </h1>
     <%= link_to 'New Post', new_post_path %>
-    <%= link_to "Sign In", sessions_path%>
-    <%= link_to "Sign Out", sessions_path, method: :delete %>
     </nav>
 
     <%= yield %>
   </body>
 
-  <nav class = "bottomnav">
-    <a class = "bottomlink" href = "github.com">Github</a>
-  </nav>
+    <nav class = "bottomnav">
+      <a class = "bottomlink" href = "github.com">Github</a>
+    </nav>
+
 </html>

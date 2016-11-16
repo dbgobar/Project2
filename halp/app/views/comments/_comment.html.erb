@@ -1,16 +1,16 @@
 
 <p>
-  <strong>Commenter:</strong>
+  <strong class = "labels">Commenter:</strong>
   <%= comment.commenter %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong class = "labels">Comment:</strong>
   <%= comment.content %>
 </p>
 
-<p>
+<button>
   <%= link_to 'Delete Comment', [comment.post, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
-</p>
+</button>

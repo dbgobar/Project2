@@ -1,13 +1,13 @@
 
 <div class = "showpage">
 
+
+  <img src= "<%= @post.photo_url %>">
+
 <p>
-  <strong>Name:</strong>
+  <strong></strong>
   <%= @post.name %>
 </p>
-
-
-<%= image_tag image_url("post.photo_url")%>
 
 <p>
   <strong>Description:</strong>
@@ -16,19 +16,23 @@
 
 <p>
   <strong>Resume link:</strong>
-  <%= @post.resume %>
+  <a><%= @post.resume %></a>
 </p>
 
+<div class = "comments">
 
-<h2>Comments</h2>
-<%= render @post.comments %>
+  <div class ="blurb">
+      <h3>C O M M E N T S</h3>
+      <%= render @post.comments %>
+  </div>
 
-<h2>Add your comment here:</h2>
-<%= render 'comments/form' %>
-
-<div class = "navlinks">
-<%= link_to 'Back |', posts_path %>
-<%= link_to 'Edit', edit_post_path(@post)%>
+  <h3>Add your tips and changes here:</h3>
+  <%= render 'comments/form' %>
 </div>
+
+  <div class = "bottomlinks">
+  <%= link_to 'Back |', posts_path %>
+  <%= link_to 'Edit', edit_post_path(@post)%>
+  </div>
 
 </div>
