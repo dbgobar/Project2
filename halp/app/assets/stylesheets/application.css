@@ -34,12 +34,12 @@ h1 {
 .postinfo {
   margin: 10px;
   margin-top: 80px;
+  margin-bottom: 100px;
   padding: 20px;
   width: 60%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: rgba(0, 70, 100, 0.6);
   border-radius: 20px 20px 20px 20px;
@@ -47,6 +47,7 @@ h1 {
 
 .eachpost {
   text-align: center;
+  width: 200px;
 }
 
 img{
@@ -92,6 +93,7 @@ ul{
   align-items: center;
   margin: 20px;
   margin-top: 70px;
+  margin-bottom: 70px;
   padding: 30px;
   width: 60%;
 }
@@ -105,11 +107,18 @@ ul{
   padding: 30px 0 30px 0;
 }
 
+.bottomnav{
+  bottom: 0;
+ position: fixed;
+}
+
+/*  comments section  */
 .comments{
   width: 95%;
   padding: 10px;
   margin: 10px;
-  background-color: rgb(210, 195, 176);
+  /*background-color: rgb(210, 195, 176);*/
+  background-color: white;
   color: black;
 
 }
@@ -126,7 +135,7 @@ ul{
   border-bottom: solid black 1px;
 }
 .blurb{
- border: 6px solid #8E836b;
+ border: 3px solid #8E836b;
  padding: 20px;
  border-radius: 20px 20px 20px 20px;
 }
@@ -135,43 +144,35 @@ button{
   background-color: #8E836b;
 }
 
-/*.blurb
-{
-position: relative;
-width: 405px;
-height: 180px;
-padding: 0px;
-background: #d2c3b0;
--webkit-border-radius: 17px;
--moz-border-radius: 17px;
-border-radius: 17px;
-border: #8e836b solid 5px;
+/*  users/sessions  */
+.signin{
+  color:rgb(0, 104, 155);
+  text-decoration: underline;
+  width: 150px;
+  height: 150px;
+  margin: 40px;
+  margin-top: 100px;
+  padding: 40px 60px 40px 60px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  box-shadow: 3px 8px 5px 6px rgba(0,0,0,0.3);
 }
 
-.blurb:after
-{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 24px 16px 0;
-border-color: #d2c3b0 transparent;
-display: block;
-width: 0;
-z-index: 1;
-bottom: -24px;
-left: 72px;
+.signup{
+  color:rgb(0, 104, 155);
+  text-decoration: underline;
+  width: 150px;
+  height: 150px;
+  margin: 40px;
+  margin-top: 100px;
+  padding: 40px 60px 40px 60px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  box-shadow: 3px 8px 5px 6px rgba(0,0,0,0.3);
 }
 
-.blurb:before
-{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 28px 20px 0;
-border-color: #8e836b transparent;
-display: block;
-width: 0;
-z-index: 0;
-bottom: -33px;
-left: 68px;
-}*/
+.signlinks{
+  margin-left: auto;
+  padding-right: 30px;
+
+}
