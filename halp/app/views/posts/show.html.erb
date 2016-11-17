@@ -3,30 +3,31 @@
 
 
   <img src= "<%= @post.photo_url %>">
-
-<p>
+<div class = "showinfo">
+<p id = "name">
   <strong></strong>
   <%= @post.name %>
 </p>
 
-<p>
+<p class = "info">
   <strong>Description:</strong>
   <%= @post.description %>
 </p>
 
-<p>
+<p class = "info">
   <strong>Resume link:</strong>
   <a><%= @post.resume %></a>
 </p>
+</div>
 
 <div class = "comments">
 
   <div class ="blurb">
       <h3>C O M M E N T S</h3>
-      <%= render @post.comments %>
+      <%= render @post.comments%>
   </div>
 
-  <h3>Add your tips and changes here:</h3>
+<h3>Add your tips and changes here:</h3>
   <%= render 'comments/form' %>
 </div>
 

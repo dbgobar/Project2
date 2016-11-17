@@ -52,6 +52,13 @@ h1 {
   border-radius: 20px 20px 20px 20px;
 }
 
+.showinfo{
+  text-align: center;
+}
+#name {
+  font-size: 20px;
+}
+
 .eachpost {
   text-align: center;
   width: 200px;
