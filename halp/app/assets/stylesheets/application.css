@@ -1,6 +1,4 @@
-/**{
-    border: red solid 1px;
-}*/
+
 body {
 
   background-image: url(desk4.jpeg);
@@ -16,13 +14,21 @@ body {
 
 @media (max-width: 480px){
   .postinfo{
-    color: red;
+
   }
   img{
-    width: 90px;
-    height: 90px;
+
     border-radius: 50%;
   }
+  body{
+
+  }
+  .eachpost{
+    margin: auto 20px;
+    /*background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 10px 10px;*/
+  }
+
 }
 
 h1 {
@@ -36,6 +42,7 @@ h1 {
   margin-top: 80px;
   margin-bottom: 100px;
   padding: 20px;
+  padding-bottom: 60px;
   width: 60%;
   display: flex;
   justify-content: center;
@@ -48,6 +55,9 @@ h1 {
 .eachpost {
   text-align: center;
   width: 200px;
+  height: 300px;
+  margin: 10px;
+
 }
 
 img{
@@ -74,18 +84,38 @@ a{
   text-decoration: none;
 }
 
+/* profile info for each person on homepage*/
+.description{
+  font-size: 12px;
+  margin: 7px;
+  font-weight: 100;
+}
+.linebetween{
+  border: 1px solid rgba(0,90, 130, 0.6);
+}
+.name{
+  font-size: 16px;
+}
+.profiletext{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    margin: 2px;
+    border-radius: 10px 10px 10px 10px;
+}
+.userlinks{
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: blue;
+  font-size: 13px;
+}
 
 ul{
   list-style-type:none;
   padding: 0;
 }
 
-.userlinks {
-  display: flex;
-  justify-content: center;
-  color: teal;
-}
-
+/*  individual profile pages */
 .showpage{
   background-color: rgba(0, 70, 100, 0.6);
   display: flex;
@@ -131,9 +161,6 @@ ul{
   text-decoration: underline;
 }
 
-.sepcomments{
-  border-bottom: solid black 1px;
-}
 .blurb{
  border: 3px solid #8E836b;
  padding: 20px;
@@ -147,12 +174,11 @@ button{
 /*  users/sessions  */
 .signin{
   color:rgb(0, 104, 155);
-  text-decoration: underline;
   width: 150px;
   height: 150px;
   margin: 40px;
   margin-top: 100px;
-  padding: 40px 60px 40px 60px;
+  padding: 20px 65px 60px 65px;
   border-radius: 20px 20px 20px 20px;
   background-color: white;
   box-shadow: 3px 8px 5px 6px rgba(0,0,0,0.3);
@@ -160,19 +186,22 @@ button{
 
 .signup{
   color:rgb(0, 104, 155);
-  text-decoration: underline;
   width: 150px;
   height: 150px;
   margin: 40px;
   margin-top: 100px;
-  padding: 40px 60px 40px 60px;
+  padding: 20px 65px 60px 65px;
   border-radius: 20px 20px 20px 20px;
   background-color: white;
   box-shadow: 3px 8px 5px 6px rgba(0,0,0,0.3);
 }
 
+.signin h2, .signup h2{
+  text-align: center;
+  font-family: 'Catamaran', sans-serif;
+
+}
 .signlinks{
   margin-left: auto;
   padding-right: 30px;
-
 }

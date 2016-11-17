@@ -1,14 +1,18 @@
+
+
 <div class= "postinfo">
 
   <% @posts.each do |post| %>
     <div class = "eachpost">
       <ul>
       <li><img src= "<%= post.photo_url %>"></li>
-      <li><%= post.name %></li>
-      <li><%= post.description %></li>
-
+    <div class = "profiletext">
+      <li><div class ="name"><%= post.name %></div></li>
+      <div class = "linebetween"></div>
+      <li><div class ="description"><%= post.description %></div></li>
+    </div>
         <div class = "userlinks">
-          <div><%= link_to 'show  |', post_path(post) %> </div>
+          <div><%= link_to 'view  |', post_path(post) %> </div>
           <div><%= link_to 'edit  |', edit_post_path(post)%> </div>
           <div><%= link_to 'delete', post_path(post),
                   method: :delete,
