@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20161116141936) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    # instead of having an attribute of commenter for comments. You have a user model already, why not associate comments with users?
     t.string   "commenter"
     t.text     "content"
     t.integer  "post_id"
@@ -23,11 +24,12 @@ ActiveRecord::Schema.define(version: 20161116141936) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
   end
-
+  # the name posts seems not super semantic for what this model is. Maybe request or Need
   create_table "posts", force: :cascade do |t|
     t.string   "name"
     t.string   "photo_url"
     t.string   "description"
+    # resume seems like too much to put into one string, I would consider moving this into a separate model.
     t.string   "resume"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

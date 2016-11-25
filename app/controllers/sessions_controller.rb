@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
     @user = User.new
   end
 
+# if you copy and pasted this from our lesson plans, i'd encourage you to not do so. Instead write the code out so you can get practice.
   def create
   input_username = params[:user][:username]   # Save the username value submitted through the form
 
