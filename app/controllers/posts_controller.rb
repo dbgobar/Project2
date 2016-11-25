@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+# if you aren't using basic auth, get rid of it! Having this code in here could potentially signal to employers that much of this code was largely taken from that tutorial.
   # http_basic_authenticate_with name: "dhh", password: "secret",
   # except: [:index, :show]
 
