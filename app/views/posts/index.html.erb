@@ -12,11 +12,11 @@
       <li><div class ="description"><%= post.description %></div></li>
     </div>
         <div class = "userlinks">
-          <div><%= link_to 'view  |', post_path(post) if @current_user %> </div>
-          <div><%= link_to 'edit  |', edit_post_path(post) if @current_user %> </div>
+          <div><%= link_to 'view  |', post_path(post) %> </div>
+          <div><%= link_to 'edit  |', edit_post_path(post) %> </div>
           <div><%= link_to 'delete', post_path(post),
                   method: :delete,
-                  data: { confirm: 'Are you sure?' } if @current_user %></div>
+                  data: { confirm: 'Are you sure?' } %> </div>
         </div>
       </ul>
     </div>

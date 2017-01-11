@@ -17,21 +17,8 @@
 
     <nav class = "topnav">
     <h1><%=link_to 'H A L P', posts_path%> </h1>
+    <%= link_to("New Post", new_post_path(@post))%>
 
-      <% if @current_user %> 
-        <%= link_to("New Post", new_post_path(@post))%>
-      <% end %>
-
-
-    <div class = "signlinks">
-      <% if @current_user %>
-      <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
-      <%= link_to "Sign Out", session_path, method: :delete %>
-      <% else %>
-      <%= link_to "Sign Up", new_user_path %>
-      <%= link_to "Sign In", new_session_path %>
-      <% end %>
-    </div>
     </nav>
 
     <%= yield %>

@@ -20,21 +20,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    redirect_to root_path unless @current_user
     @post = Post.create(post_params)
     @post.save
     redirect_to @post
   end
 
   def update
-    redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     @post.update(post_params)
     redirect_to @post
   end
 
   def destroy
-    redirect_to root_path unless @current_user
     @post = Post.find(params[:id])
     @post.destroy
 
