@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100" rel="stylesheet">
+
 
   </head>
 
@@ -20,21 +23,24 @@
       <%= link_to("New Post", new_post_path(@post))%>
     <% end %>
 
-    <div>
+    <div class>
     <% if user_signed_in? %>
       <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-      <%= link_to "Sign In", new_user_session_path %>
     <% end %>
     </div>
-
     </nav>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+    <% if user_signed_in? %>
+    <% else %>
+    <div class="aboutHalp"><h1 class="yellow">What is Halp?</h1>  <div class="about"> The only application where
+      you can get real live tips on how to better your brand. We are all looking to better ourselves, stay ahead and stand out. What better way than to get real feedback from our users! <span class ="blue">Register, post what you want reviewed by other users and see what you can improve on!<span></div> </div>
+    <% end %>
+
     <%= yield %>
+
   </body>
   <% if user_signed_in? %>
     <nav class = "bottomnav">

@@ -12,24 +12,7 @@ body {
   color: white;
 }
 
-@media (max-width: 480px){
-  .postinfo{
 
-  }
-  img{
-
-    border-radius: 50%;
-  }
-  body{
-
-  }
-  .eachpost{
-    margin: auto 20px;
-    /*background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px 10px 10px 10px;*/
-  }
-
-}
 
 h1 {
   color: white;
@@ -173,36 +156,47 @@ button{
 }
 
 /*  users/sessions  */
-/*.signin{
-  color:rgb(0, 104, 155);
-  width: 150px;
-  height: 150px;
-  margin: 40px;
-  margin-top: 100px;
-  padding: 20px 65px 60px 65px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: white;
-  box-shadow: 3px 8px 5px 6px rgba(0,0,0,0.3);
+
+.sessionslinks{
+  background-color: rgba(30, 40, 50, 0.8);
+  padding: 20px 8% 40px 8%;
+  border-radius: 20px;
+  margin-top:4%;
 }
 
-.signup{
-  color:rgb(0, 104, 155);
-  width: 150px;
-  height: 150px;
-  margin: 40px;
-  margin-top: 100px;
-  padding: 20px 65px 60px 65px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: white;
-  box-shadow: 3px 8px 5px 6px rgba(0,0,0,0.3);
-}
-
-.signin h2, .signup h2{
+/* about section*/
+.aboutHalp{
+  margin: 20px 10% 0 10%;
   text-align: center;
-  font-family: 'Catamaran', sans-serif;
+}
+.yellow{
+  color: yellow;
+  font-family: 'Raleway', sans-serif;
+  font-size: 400%;
+  padding: 8px;
+}
+.about{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width: 480px){
+
+  img{
+    border-radius: 50%;
+  }
+
+  .eachpost{
+    margin: auto 20px;
+    /*background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 10px 10px;*/
+  }
+  .about{
+    font-size: 13px;
+  }
+  .yellow{
+  font-size: 35px;
+  }
+
 
 }
-.signlinks{
-  margin-left: auto;
-  padding-right: 30px;
-}*/
