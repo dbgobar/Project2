@@ -13,10 +13,12 @@
     </div>
         <div class = "userlinks">
           <div><%= link_to 'view  |', post_path(post) %> </div>
-          <div><%= link_to 'edit  |', edit_post_path(post) %> </div>
-          <div><%= link_to 'delete', post_path(post),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %> </div>
+          <% if post.user == current_user %>
+            <div><%= link_to 'edit  |', edit_post_path(post) %> </div>
+            <div><%= link_to 'delete', post_path(post),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %> </div>
+          <% end %>
         </div>
       </ul>
     </div>

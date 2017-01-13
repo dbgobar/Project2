@@ -14,18 +14,31 @@
 
 
   <body>
-
     <nav class = "topnav">
     <h1><%=link_to 'H A L P', posts_path%> </h1>
-    <%= link_to("New Post", new_post_path(@post))%>
+    <% if user_signed_in? %>
+      <%= link_to("New Post", new_post_path(@post))%>
+    <% end %>
+
+    <div>
+    <% if user_signed_in? %>
+      <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path %>
+      <%= link_to "Sign In", new_user_session_path %>
+    <% end %>
+    </div>
 
     </nav>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
   </body>
-
+  <% if user_signed_in? %>
     <nav class = "bottomnav">
       <a class = "bottomlink" href = "github.com">Github</a>
     </nav>
-
+  <% end %>
 </html>
