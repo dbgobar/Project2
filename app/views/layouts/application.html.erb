@@ -11,32 +11,35 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100" rel="stylesheet">
 
 
   </head>
 
 
   <body>
-    <nav class = "topnav">
-    <h1><%=link_to 'H A L P', posts_path%> </h1>
     <% if user_signed_in? %>
-      <%= link_to("New Post", new_post_path(@post))%>
-    <% end %>
+        <nav class = "topnav">
+        <h1><%=link_to 'H A L P', posts_path%> </h1>
+        <% if user_signed_in? %>
+          <%= link_to("New Post", new_post_path(@post))%>
+        <% end %>
 
-    <div class>
-    <% if user_signed_in? %>
-      <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+        <div class>
+        <% if user_signed_in? %>
+          <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+        <% end %>
+        </div>
+        </nav>
     <% end %>
-    </div>
-    </nav>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <% if user_signed_in? %>
     <% else %>
-    <div class="aboutHalp"><h1 class="yellow">What is Halp?</h1>  <div class="about"> The only application where
-      you can get real live tips on how to better your brand. We are all looking to better ourselves, stay ahead and stand out. What better way than to get real feedback from our users! <span class ="blue">Register, post what you want reviewed by other users and see what you can improve on!<span></div> </div>
+    <div class="aboutHalp"><h1 class="yellow">Welcome to Halp!</h1>  <div class="about"> The only application where
+      you can get real live tips on how to better your brand. We are all looking to stay ahead and stand out. What better way than to get real feedback from other professionals using Halp. <span class ="blue">Register, post what you would like reviewed (Resume, Headshot, Cover Letter, etc.) and see what you can improve on!<span></div> </div>
     <% end %>
 
     <%= yield %>

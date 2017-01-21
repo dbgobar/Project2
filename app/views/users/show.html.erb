@@ -1,0 +1,12 @@
+<div class="userAccount">
+<h1><%= full_name %></h1>
+<p><%= @user.username %></p>
+<p><%= @user.about %></p>
+
+<div class="userPosts">
+<h2> </h2>
+<% @user_posts.each do |post| %>
+  <%= link_to post.description, post_path(post) %>
+<% end %>
+</div>
+</div>
