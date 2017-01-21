@@ -14,8 +14,8 @@
         <div class = "userlinks">
           <div><%= link_to 'Details  ', post_path(post) %> </div>
           <% if post.user == current_user %>
-            <div><%= link_to 'edit  ', edit_post_path(post) %> </div>
-            <div><%= link_to 'delete', post_path(post),
+            <div><%= link_to 'Edit  ', edit_post_path(post) %> </div>
+            <div><%= link_to 'Delete', post_path(post),
                     method: :delete,
                     data: { confirm: 'Are you sure?' } %> </div>
           <% end %>
