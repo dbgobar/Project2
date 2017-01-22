@@ -20,20 +20,20 @@
 </p>
 </div>
 
-<div class = "comments">
-
-  <div class ="blurb">
-      <h3>C O M M E N T S</h3>
-      <%= render @post.comments%>
-  </div>
-
-<h3>Add your tips and changes here:</h3>
-  <%= render 'comments/form' %>
+<div class = "bottomlinks">
+<%= link_to 'Back |', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post)%>
 </div>
 
-  <div class = "bottomlinks">
-  <%= link_to 'Back |', posts_path %>
-  <%= link_to 'Edit', edit_post_path(@post)%>
+<div class = "comments">
+  <h4> What can I improve on? </h4>
+  <%= render 'comments/form' %>
+
+  <div class ="blurb">
+      <%= render @post.comments%>
   </div>
+</div>
+
+
 
 </div>

@@ -11,8 +11,6 @@ body {
   color: white;
 }
 
-
-
 h1 {
   color: white;
   margin: 0;
@@ -127,41 +125,37 @@ ul{
 
 /*  comments section  */
 .comments{
-  width: 95%;
+  width: 100%;
   padding: 10px;
-  margin: 10px;
+  margin: 0;
   /*background-color: rgb(210, 195, 176);*/
   background-color: white;
   color: black;
-
 }
 
 .comments h3{
   color: black;
 }
-
 .labels{
   text-decoration: underline;
+  font-size: 12px;
 }
-
 .blurb{
- border: 3px solid #8E836b;
  padding: 20px;
- border-radius: 20px 20px 20px 20px;
 }
 
+.button{
+  background-color: #C1BEBE;
+  border-radius: 5px 5px 5px 5px;
+  width: 130px;
+  height: 30px;
+  color: #757272;
+  font-weight: bolder;
+  border-style: solid;
+}
 button{
-  background-color: #8E836b;
-}
-
-/*  users/sessions  */
-
-.sessionslinks{
-  background-color: rgba(30, 40, 50, 0.8);
-  padding: 20px 8% 40px 8%;
-  border-radius: 20px;
-  margin-top:2%;
-  margin-bottom: 5%;
+  background-color: gray;
+  border-style: solid;
 }
 
 /* about section*/
@@ -185,6 +179,44 @@ button{
  color: rgb(0, 204, 255);
 }
 
+/* Sign in and Login section */
+.loginButton{
+  background-color: rgba(34, 44, 54, 0.2);
+  width: 100px;
+  color: gray;
+  border-style: solid;
+  height: 40px;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+.field{
+  margin: 10px 0 10px 0;
+}
+.sessionslinks{
+  text-align: center;
+  background-color: rgba(30, 40, 50, 0.8);
+  padding: 20px 8% 40px 8%;
+  border-radius: 20px;
+  margin-top:2%;
+  margin-bottom: 5%;
+}
+.sessionslinks h2{
+  color: #CBCBCB;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.sharedLinks{
+  color: #CBCBCB;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+}
+.minimumPass{
+  color: #CBCBCB;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 15px;
+}
+
+
+/* Responsive pages */
 @media (max-width: 480px){
 
   img{
