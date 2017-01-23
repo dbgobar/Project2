@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("desk4.jpg");
+  background-image: url("tech3.jpg");
   background-size: cover;
   margin: 0;
   display: flex;
@@ -164,8 +164,9 @@ button{
   text-align: center;
 }
 .yellow{
-  color: yellow;
-  /*font-family: 'Raleway', sans-serif;*/
+  /*color: yellow;*/
+  color: rgb(0, 204, 255);
+  /*color: #1699E5;*/
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: lighter;
   font-size: 700%;
@@ -173,10 +174,13 @@ button{
 }
 .about{
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: rgb(34, 44, 54);
 }
 .blue{
- color: rgb(0, 204, 255);
+ /*color: rgb(0, 204, 255);*/
+ color: #648FA8;
 }
 
 /* Sign in and Login section */
