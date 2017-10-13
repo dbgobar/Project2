@@ -78,7 +78,7 @@ a{
   font-weight: 100;
 }
 .linebetween{
-  border: 1px solid rgba(0,90, 130, 0.6);
+  border: 1px solid rgba(0,140, 180, 0.5);
 }
 .name{
   font-size: 16px;
@@ -123,6 +123,19 @@ ul{
  position: fixed;
 }
 
+/* Notepad API */
+.notepad {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 90px;
+  right: 50px;
+}
+.notepad h1{
+  color: black;
+}
+
 /*  comments section  */
 .comments{
   width: 100%;
@@ -165,8 +178,8 @@ button{
 }
 .yellow{
   /*color: yellow;*/
-  color: rgb(0, 204, 255);
-  /*color: #1699E5;*/
+  /*color: rgb(0, 204, 255);*/
+  color: #1699E5;
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: lighter;
   font-size: 700%;

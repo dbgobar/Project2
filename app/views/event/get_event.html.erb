@@ -1,0 +1,10 @@
+<form method="get" action="/">
+  <label>City:</label>
+  <input name="city" type="text">
+  <label>Category:</label>
+  <input name="name" type="text">
+  <input type="submit">
+</form>
+
+
+<p>Events for <%= "#{@event.city}" %> are listed here: <%= "#{@event.name}" %> <%= "#{@event.event_url}" %></p>
