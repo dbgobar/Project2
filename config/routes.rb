@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :users
   root 'posts#index'
 
-  get '/meetup/:city/:name' to: 'meetup#show', as: 'meetup'
-  root 'meetup#get_meetup'
+#  get '/meetup' to: 'meetup#show', as: 'meetup'
+  root 'meetup#get_meetups'
 end

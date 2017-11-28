@@ -18,18 +18,34 @@ h1 {
   padding-left: 10px;
 }
 .postinfo {
-  margin: 10px;
-  margin-top: 0px;
-  margin-bottom: 100px;
-  padding: 20px;
+  margin-top: -20px;
+  margin-bottom: 80px;
+  padding: 10px;
+  padding-top: 60px;
   padding-bottom: 60px;
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  background-color: rgba(0, 70, 100, 0.6);
-  border-radius: 20px 20px 20px 20px;
+  background-color: rgb(53, 76, 99);
+  z-index: 100;
+  overflow-y: auto;
+}
+.eachpost:hover, .eachpost.grow:hover{
+  background-color: orange;
+  transform: scale(1.1);
+
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+
+  -webkit-transition: transform 0.60s ease-in-out;
+  -moz-transition:transform 0.60s ease-in-out;
+  -ms-transition:transform 0.60s ease-in-out;
 }
 
 .showinfo{
@@ -43,8 +59,9 @@ h1 {
   text-align: center;
   width: 200px;
   height: 300px;
-  margin: 10px;
-
+  margin: 30px;
+  border-radius: 20px;
+  padding-bottom: 15px;
 }
 
 img{
@@ -63,6 +80,7 @@ img{
   background-color: rgb(0, 204, 255);
   box-shadow: 0 8px 6px -6px #999;
   position: fixed;
+  z-index: 500;
 }
 
 a{
@@ -87,7 +105,7 @@ a{
     background-color: rgba(0, 0, 0, 0.2);
     padding: 8px;
     margin: 2px;
-    border-radius: 10px 10px 10px 10px;
+    /*border-radius: 10px 10px 10px 10px;*/
 }
 
 
@@ -121,18 +139,19 @@ ul{
 .bottomnav{
   bottom: 0;
  position: fixed;
+ z-index: 200
 }
 
-/* Notepad API */
-.notepad {
+/* Meetup API */
+.meetup {
   border: 1px solid red;
-  width: 300px;
-  height: 300px;
+  width: 40%;
+  height: 90%;
   position: absolute;
   top: 90px;
   right: 50px;
 }
-.notepad h1{
+.meetup h1{
   color: black;
 }
 

@@ -5,6 +5,7 @@ before_action :authenticate_user!
 
   def index
     @posts = Post.all
+    @meetups = get_meetups
   end
 
   def show
@@ -41,6 +42,10 @@ before_action :authenticate_user!
   private
   def post_params
     params.require(:post).permit(:name, :photo_url, :description, :resume)
+  end
+
+  def get_meetups
+    []
   end
 
 
